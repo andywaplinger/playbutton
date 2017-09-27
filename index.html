@@ -1,0 +1,98 @@
+<html>
+<head>
+  <style type="text/css">
+    .play-button {fill:#3dbbd0;}
+    .wistia {opacity: 0.7;}
+    .play-arrow {fill:#FFFFFF;}
+    .youtube {fill:#FF0000;}
+  </style>
+
+  <link rel='stylesheet' href='css/play-button.css' />
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Spectrum Color Picker-->
+  <script src='js/spectrum.js'></script>
+  <link rel='stylesheet' href='css/spectrum.css' />
+  <!--Save SVG as PNG-->
+  <script src='js/saveSvgAsPng.js'></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Play Button Creator</h1>
+      <div class="explainer">
+        <div class="explainer-text">
+          <ol>
+            <li>Pick your play button color:</li>
+            <li>Click "download" under the button you want</li>
+          </ol>
+          <p>Important notes:</p>
+          <ul>
+            <li>The YouTube button will always be red to respect their brand guidelines</li>
+            <li>The buttons will be 1000px wide PNGs and have transparent backgrounds</li>
+            <li>The Wistia button looks like a different color because its opacity is 70%</li>
+          </ul>
+        </div>
+        <h3>Choose your color</h3>
+        <input id='colorpicker' value='#3dbbd0' />
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="button-row">
+      <div class="play-button">
+      <h3>Vimeo Play Button</h3>
+        <div class="svg">
+          <svg version="1.1" id='vimeo' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 1000 615" style="enable-background:new 0 0 1000 615;" xml:space="preserve">
+            <g>
+              <path class="play-button" d="M938.5,614.8H61.5C27.7,614.8,0,587.1,0,553.2L0,61.6C0,27.7,27.7,0,61.5,0l876.9,0
+                c33.8,0,61.5,27.7,61.5,61.5v491.6C1000,587.1,972.3,614.8,938.5,614.8z"/>
+              <polygon class="play-arrow" points="676.9,307.1 385,154.3 385,460  "/>
+            </g>
+          </svg>
+        </div>
+        <button class="btn" onclick="saveSvgAsPng(document.getElementById('vimeo'), 'vimeo-play-button.png');" href="javascript:void(0);">Download Vimeo</button>
+      </div>
+
+      <div class="play-button">
+      <h3>Wistia Play Button</h3>
+        <div class="svg">
+          <svg version="1.1" id='wistia' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 1000 638" style="enable-background:new 0 0 1000 638;" xml:space="preserve">
+          <g>
+            <rect x="-0.2" y="0" class="play-button wistia" width="1000.2" height="637.9"/>
+            <polygon class="play-arrow" points="622,319 422,173.3 422,464.6  "/>
+          </g>
+          </svg>
+        </div>
+        <button class="btn" onclick="saveSvgAsPng(document.getElementById('wistia'), 'wistia-play-button.png');" href="javascript:void(0);">Download Wistia</button>
+      </div>
+
+      <div class="play-button">
+      <h3>YouTube Play Button</h3>
+        <div class="svg">
+          <svg version="1.1" id='youtube' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1000 708.6" style="enable-background:new 0 0 1000 708.6;" xml:space="preserve">
+          <g>
+            <path class="youtube" d="M0.1,339.1c0,80.4,0,129.1,10.3,199.7c7,47.6,18.3,99.9,66,133c33.1,23,124.5,27.3,161.3,29.1
+              s164.1,7.7,256,7.7h12.9c91.9,0,219.2-5.8,256-7.7s128.2-6.1,161.3-29.1c47.6-33.1,59-85.4,66-133c10.3-70.5,10.3-119.3,10.3-199.7
+              v30.3c0-80.4,0-129.1-10.3-199.7c-7-47.6-18.3-99.9-66-133c-33.1-23-124.5-27.3-161.3-29.1S598.4,0,506.5,0l-12.9,0
+              c-91.9,0-219.2,5.8-256,7.7S109.5,13.8,76.4,36.8c-47.6,33.1-59,85.4-66,133C0.1,240.3,0.1,289,0.1,369.4"/>
+            <polygon class="play-arrow" points="661.9,354.4 395.9,208.2 395.9,500.6  "/>
+          </g>
+          </svg>
+        </div>
+        <button class="btn" onclick="saveSvgAsPng(document.getElementById('youtube'), 'youtube-play-button.png');" href="javascript:void(0);">Download YouTube</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Colorpicker script-->
+  <script src='js/colorPicker.js'></script>
+</body>
+</html>
